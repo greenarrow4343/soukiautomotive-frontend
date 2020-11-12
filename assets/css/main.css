@@ -1,0 +1,88 @@
+body, html{
+    font-family: "Roboto-Regular", sans-serif;
+}
+
+.bg-light{
+    background-color: white !important;
+}
+
+.bg-dark{
+    background-color: black !important;
+}
+
+.nav-logo{
+    max-height: 50px;
+}
+
+.nav-link{
+    padding: 15px 15px !important;
+    font-weight: bold;
+    color: #ffffff !important;
+}
+
+.dropdown-menu{
+    /* margin-top: 10px !important; */
+    -webkit-box-shadow: 2px 3px 10px #cacaca;
+    box-shadow: 2px 3px 10px #9f9f9f;
+    border-radius: 3px;
+    border: none;
+}
+
+.nav-search-btn{
+    color: white;
+    font-weight: bold;
+    background-color: #94d800 !important;
+}
+
+.navbar-toggler-icon{
+    color: #94d800 !important;
+}
+
+.text-primary{
+    color: #94d800 !important;
+}
+
+
+/* @media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+} */
+
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+	.navbar .nav-item:hover .nav-link{ color: #fff;  }
+	.navbar .dropdown-menu.fade-down{ top:80%; transform: rotateX(-75deg); transform-origin: 0% 0%; }
+	.navbar .dropdown-menu.fade-up{ top:180%;  }
+    .navbar .nav-item:hover .dropdown-menu{ transition: .3s; opacity:1; visibility:visible; top:100%; transform: rotateX(0deg); }
+    .dropdown-menu::before {
+        border-bottom: 9px solid rgba(0, 0, 0, 0.2);
+        border-left: 9px solid rgba(0, 0, 0, 0);
+        border-right: 9px solid rgba(0, 0, 0, 0);
+        content: "";
+        display: inline-block;
+        left: 32%; /* position */
+        position: absolute;
+        top: -8px;
+    }
+    
+    .dropdown-menu::after {
+        border-bottom: 8px solid #FFFFFF;
+        border-left: 9px solid rgba(0, 0, 0, 0);
+        border-right: 9px solid rgba(0, 0, 0, 0);
+        content: "";
+        display: inline-block;
+        left: 32%; /* position */
+        position: absolute;
+        top: -7px;
+    }
+
+    .nav-search-input{
+        width: 400px !important;
+    }
+
+    .carousel-control-prev,.carousel-control-next span i {
+        font-size: 30px;
+    }
+}
