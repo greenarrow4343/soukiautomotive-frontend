@@ -1,4 +1,4 @@
-body, html{
+html, body{
     font-family: "Roboto-Regular", sans-serif;
 }
 
@@ -22,7 +22,7 @@ body, html{
 
 .dropdown-menu{
     /* margin-top: 10px !important; */
-    -webkit-box-shadow: 2px 3px 10px #cacaca;
+    -webkit-box-shadow: 2px 3px 10px#9f9f9f;
     box-shadow: 2px 3px 10px #9f9f9f;
     border-radius: 3px;
     border: none;
@@ -40,6 +40,13 @@ body, html{
 
 .text-primary{
     color: #94d800 !important;
+}
+
+#tyre-dealers-section .card{
+    -webkit-box-shadow: 2px 3px 8p#bfbfbf;
+    box-shadow: 2px 3px 8px #bfbfbf;
+    border-radius: 3px;
+    border: none;
 }
 
 
@@ -82,7 +89,7 @@ body, html{
         width: 400px !important;
     }
 
-    .carousel-control-prev,.carousel-control-next span i {
+    .carousel-control-prev span i  ,.carousel-control-next span i {
         font-size: 30px;
     }
 }
