@@ -1,5 +1,10 @@
 html, body{
     font-family: "Roboto-Regular", sans-serif;
+    overflow-x: hidden;
+}
+
+.bg-primary-custom{
+    background-color: #94d800 !important;
 }
 
 .bg-light{
@@ -10,12 +15,16 @@ html, body{
     background-color: black !important;
 }
 
+.bg-dark-1{
+    background-color: darkblue;
+}
+
 .nav-logo{
     max-height: 50px;
 }
 
 .nav-link{
-    padding: 15px 15px !important;
+    padding: 20px !important;
     font-weight: bold;
     color: #ffffff !important;
 }
@@ -28,10 +37,22 @@ html, body{
     border: none;
 }
 
+.nav-search-input{
+    outline: none !important;
+    margin: 0;
+    border: none;
+}
+
 .nav-search-btn{
     color: white;
     font-weight: bold;
     background-color: #94d800 !important;
+    margin: 0;
+    border: none;
+}
+
+.nav-search-btn:focus {
+    outline: none !important;
 }
 
 .navbar-toggler-icon{
@@ -47,8 +68,16 @@ html, body{
     box-shadow: 2px 3px 8px #bfbfbf;
     border-radius: 3px;
     border: none;
+    height: 100%;
 }
 
+#tyre-dealers-section .card h5{
+    font-weight: bold;
+}
+
+#enquiry-form-section{
+    min-height: 70vh;
+}
 
 /* @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
@@ -85,8 +114,9 @@ html, body{
         top: -7px;
     }
 
-    .nav-search-input{
+    .nav-search-box{
         width: 400px !important;
+        padding-right: 15px !important;
     }
 
     .carousel-control-prev span i  ,.carousel-control-next span i {
