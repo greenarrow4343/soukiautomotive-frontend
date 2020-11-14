@@ -90,7 +90,7 @@
     </header>
 
     <section class="container" id="enquiry-form-section">
-      <form id="enquiry-form" class="my-4 mx-0 mx-md-5 p-md-5">
+      <form action="https://www.formbackend.com/f/32d9c25fe2a9384d" method="POST" id="enquiry-form" class="my-4 mx-0 mx-md-5 p-md-5">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="input_fullname">Full Name</label>
@@ -161,6 +161,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script>
 
       function getCleanFormLabel(input){
@@ -185,6 +187,27 @@
       }
 
       addDynamicFormFieldsFromURL()
+
+
+      $('#enquiry-form').submit(function(e) {
+        e.preventDefault();
+        let this_form = $(this);
+        let action = $(this).attr('action');
+        submit_form(this_form,action,this_form.serialize());
+      })
+
+      function submit_form(this_form, action, data) {
+        $.ajax({
+          type: "POST",
+          url: action,
+          data: data,
+        }).done( function(msg){
+          swal("Enquiry Sent", "Thanks, We'll get back to you shortly.", "success");
+          this_form[0].reset()
+        }).fail( function(data){
+          swal("Sending Failed", "Try Again or Contact helpdesk : 9876543210", "error");
+        });
+      }
     </script>
   </body>
 </html>
